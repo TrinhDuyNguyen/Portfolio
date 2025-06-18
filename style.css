@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #141313;
+  --liner-primary: linear-gradient(
+    90deg,
+    #ffb147 0%,
+    #ff6c63 52%,
+    #b86adf 100%
+  );
+}
