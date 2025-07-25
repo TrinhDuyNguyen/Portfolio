@@ -14,6 +14,7 @@
     <style type="text/tailwindcss">
       html {
         font-size: 62.5%; /* 1rem = 10px */
+        scroll-behavior: smooth;
       }
 
       @theme {
@@ -43,6 +44,10 @@
         background-image: var(--color-gradient);
         color: transparent;
         background-clip: text;
+      }
+
+      .bg-gradient {
+        background-image: var(--color-gradient);
       }
 
       h1,
@@ -144,8 +149,8 @@
         <!-- Section links. -->
         <div class="side_bar_links">
           <a id="home" class="side_bar_link active" href="#home">HOME</a>
-          <a id="about" class="side_bar_link" href="">ABOUT</a>
-          <a id="services" class="side_bar_link" href="">SERVICES</a>
+          <a id="about" class="side_bar_link" href="#about-me">ABOUT</a>
+          <a id="services" class="side_bar_link" href="#services">SERVICES</a>
           <a id="works" class="side_bar_link" href="">WORKS</a>
           <a id="blogs" class="side_bar_link" href="">BLOG</a>
           <a id="contact" class="side_bar_link" href="">CONTACT</a>
@@ -216,9 +221,11 @@
             <img src="../assets/mugshot.svg" alt="" />
           </div>
         </section>
+        <!-- Spacer. -->
+        <div class="m-50"></div>
         <section id="about-me" class="">
           <!-- Extra part at the top. -->
-          <div>   
+          <div>
             <p class="text-size-base">Nice to meet you!</p>
             <h2>WELCOME TO</h2>
           </div>
@@ -238,7 +245,80 @@
             <div></div>
           </div>
           <!-- My experience. -->
-          <div class="w-1 "></div>
+          <div class="w-1"></div>
+        </section>
+        <!-- Spacer. -->
+        <div class="m-50"></div>
+        <section id="services">
+          <!-- Title. -->
+          <div class="mb-40">
+            <p class="text-sm">Service</p>
+            <h2>MY SPECIALTIES</h2>
+          </div>
+          <!-- Collapsable parts. -->
+          <div>
+            <ul class="flex flex-col gap-20">
+              <!-- WEB DESIGN -->
+              <li class="flex flex-row flex-nowrap">
+                <h4
+                  class="w-[40%] flex flex-row flex-nowrap items-center gap-10"
+                >
+                  • WEB DESIGN
+                </h4>
+                <p>
+                  You can customize a template or make your own from scratch,
+                  with an immersive library at your disposal. You can customize
+                  a template
+                </p>
+              </li>
+              <hr />
+              <!-- UI/UX DESIGN -->
+              <li class="flex flex-row flex-nowrap">
+                <h4
+                  class="w-[40%] flex flex-row flex-nowrap items-center gap-10"
+                >
+                  • UI/UX DESIGN
+                </h4>
+                <p>
+                  You can customize a template or make your own from scratch,
+                  with an immersive library at your disposal. You can customize
+                  a template
+                </p>
+              </li>
+              <hr />
+              <!-- MOBILE APPLICATION -->
+              <li class="flex flex-row flex-nowrap">
+                <h4
+                  class="w-[40%] flex flex-row flex-nowrap items-center gap-10 text-gradient"
+                >
+                  • MOBILE APPLICATION
+                </h4>
+                <div class="flex flex-col gap-20">
+                  <img src="../assets/photo1.png" alt="image" class="w-1/2" />
+                  <p>
+                    You can customize a template or make your own from scratch,
+                    with an immersive library at your disposal. You can
+                    customize a template
+                  </p>
+                </div>
+              </li>
+              <hr />
+              <!-- USER RESEARCH -->
+              <li class="flex flex-row flex-nowrap">
+                <h4
+                  class="w-[40%] flex flex-row flex-nowrap items-center gap-10"
+                >
+                  • USER RESEARCH
+                </h4>
+                <p>
+                  You can customize a template or make your own from scratch,
+                  with an immersive library at your disposal. You can customize
+                  a template
+                </p>
+              </li>
+              <hr />
+            </ul>
+          </div>
         </section>
       </div>
     </div>
