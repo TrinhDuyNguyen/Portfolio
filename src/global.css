@@ -1,0 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1 {
+  font-size: var(--font-size-heading-1); /* 102px */
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--font-size-heading-2); /* 48px */
+  font-weight: bold;
+}
+
+h3 {
+  font-size: var(--font-size-heading-3); /* 40px */
+}
+
+h4 {
+  font-size: var(--font-size-heading-4); /* 32px */
+  font-weight: bold;
+}
+
+h5 {
+  font-size: var(--font-size-heading-5); /* 24px */
+}
+
+p {
+  font-size: var(--font-size-base); /* 18px */
+}

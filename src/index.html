@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      html {
+        font-size: 62.5%; /* 1rem = 10px */
+      }
+
+      @theme {
+        --color-primary: #141313;
+        --color-secondary: #ffffff;
+        --color-gradient: linear-gradient(
+          270.16deg,
+          #ffb147 5.74%,
+          #ff6c63 50.64%,
+          #b86adf 92.05%
+        );
+
+        --font-ibm-plex-sans: "IBM plex sans", sans-serif;
+        --font-ibm-plex-serif: "IBM plex serif", serif;
+
+        --text-size-heading-1: 10.2rem; /* 102px */
+        --text-size-heading-2: 4.8rem; /* 48px */
+        --text-size-heading-3: 4rem; /* 40px */
+        --text-size-heading-4: 3.2rem; /* 32px */
+        --text-size-heading-5: 2.4rem; /* 24px */
+        --text-size-base: 1.8rem; /* 18px */
+        --text-size-sm: 1.6rem; /* 16px */
+        --text-bb: 3.5rem;
+      }
+
+      .text-gradient {
+        background-image: var(--color-gradient);
+        color: transparent;
+        background-clip: text;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "IBM Plex Sans", sans-serif;
+      }
+
+      h1 {
+        font-size: var(--text-size-heading-1); /* 102px */
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: var(--text-size-heading-2); /* 48px */
+        font-weight: bold;
+      }
+
+      h3 {
+        font-size: var(--text-size-heading-3); /* 40px */
+      }
+
+      h4 {
+        font-size: var(--text-size-heading-4); /* 32px */
+        font-weight: bold;
+      }
+
+      h5 {
+        font-size: var(--text-size-heading-5); /* 24px */
+      }
+
+      p {
+        font-size: var(--text-size-base); /* 18px */
+      }
+
+      /* @layer components { */
+      .side_bar_links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .side_bar_link {
+        width: fit-content;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 2rem;
+      }
+
+      .active {
+        font-weight: bold;
+      }
+
+      .side_bar_link::after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        bottom: -7px;
+        left: 0;
+        width: 0;
+        height: 5px;
+        transition: width 0.2s ease-in-out;
+        background: var(--color-gradient);
+      }
+
+      .side_bar_link:hover::after {
+        width: 100%;
+      }
+
+      .active.side_bar_link::after {
+        width: 100%;
+      }
+      /* } */
+
+      @layer components {
+        .circle-logo {
+          @apply flex justify-center items-center w-15 h-15 rounded-full bg-secondary text-primary;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-ibm-plex-sans">
+    <!-- Sidebar and body. -->
+    <div class="flex flex-row justify-stretch w-screen h-screen">
+      <!-- Sidebar. -->
+      <div
+        class="flex flex-col flex-nowrap justify-between items-start w-[233px] bg-primary text-secondary p-10 fixed h-screen"
+      >
+        <!-- Logo. -->
+        <img
+          src="../assets/logo.svg"
+          alt="logo"
+          class="fill-secondary scale-100 relative"
+        />
+        <!-- Section links. -->
+        <div class="side_bar_links">
+          <a id="home" class="side_bar_link active" href="#home">HOME</a>
+          <a id="about" class="side_bar_link" href="">ABOUT</a>
+          <a id="services" class="side_bar_link" href="">SERVICES</a>
+          <a id="works" class="side_bar_link" href="">WORKS</a>
+          <a id="blogs" class="side_bar_link" href="">BLOG</a>
+          <a id="contact" class="side_bar_link" href="">CONTACT</a>
+        </div>
+        <!-- Bottom section -->
+        <div class="flex flex-col gap-5">
+          <!-- Socials. -->
+          <div class="flex flex-col gap-3">
+            <div class="circle-logo">
+              <img src="../assets/instagram.svg" alt="" />
+            </div>
+            <div class="circle-logo">
+              <img src="../assets/be.svg" alt="" />
+            </div>
+            <div class="circle-logo">
+              <img src="../assets/basketball.svg" alt="" />
+            </div>
+          </div>
+          <!-- Copyright notice. -->
+          <div>
+            <p class="text-xs">
+              Copyright ©2023 Jacob Jones. All right reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Body content. -->
+      <div class="p-32 ml-[233px]">
+        <section id="home" class="flex flex-row items-center justify-around">
+          <!-- Intro text. -->
+          <div class="flex flex-col gap-12 basis-1/2">
+            <!-- Title. -->
+            <h1 class="text-8xl pr-[223px]">
+              <span class="font-normal">MY NAME IS</span>
+              <span>JACOB JONES...</span>
+            </h1>
+            <!-- Subtitle. -->
+            <h4 class="text-3xl">
+              <span class="italic">Product Designer </span>
+              <span class="font-normal">based in </span>
+              <span class="italic">London</span>
+            </h4>
+            <!-- Button. -->
+            <button
+              class="flex flex-row gap-5 bg-primary text-secondary w-fit py-3 px-10 items-center"
+            >
+              <p>Let's talk with me</p>
+              <img src="../assets/ne_button.svg" alt="" />
+            </button>
+            <!-- Contacts. -->
+            <div class="flex flex-row gap-10">
+              <!-- Phone contact. -->
+              <div class="flex flex-row gap-3 items-center">
+                <img src="../assets/phone.svg" alt="" />
+                <p class="text-lg font-bold italic">+77 123 456 78 90</p>
+              </div>
+              <!-- Mail contact. -->
+              <div class="flex flex-row gap-3 items-center">
+                <img src="../assets/mail.svg" alt="" />
+                <p class="text-lg font-bold italic">
+                  trinhduynguyen123@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Mugshot. -->
+          <div class="basis-1/2">
+            <img src="../assets/mugshot.svg" alt="" />
+          </div>
+        </section>
+        <section id="about-me" class="">
+          <!-- Extra part at the top. -->
+          <div>   
+            <p class="text-size-base">Nice to meet you!</p>
+            <h2>WELCOME TO</h2>
+          </div>
+          <!-- Welcome to. -->
+          <div class="flex flex-row">
+            <!-- Image -->
+            <div>
+              <img src="../assets/avatar.PNG" alt="" />
+              <h2 class="text-gradient">JACOB JONES</h2>
+              <h3>
+                <span>Product Designer</span>
+                <span>based in</span>
+                <span>London</span>
+              </h3>
+            </div>
+            <!-- Stats -->
+            <div></div>
+          </div>
+          <!-- My experience. -->
+          <div class="w-1 "></div>
+        </section>
+      </div>
+    </div>
+    <!-- Extra socials. -->
+    <div
+      class="flex flex-col justify-center items-center gap-5 pr-5 fixed right-0 top-1/2 -translate-y-1/2"
+    >
+      <div class="circle-logo">
+        <img src="../assets/instagram.svg" alt="" />
+      </div>
+      <div class="circle-logo">
+        <img src="../assets/be.svg" alt="" />
+      </div>
+      <div class="circle-logo">
+        <img src="../assets/basketball.svg" alt="" />
+      </div>
+      <!-- Vertical line. -->
+      <div class="h-40 w-0.5 bg-primary"></div>
+    </div>
+  </body>
+</html>
